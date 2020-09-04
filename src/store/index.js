@@ -5,6 +5,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+     acer_store_price: 0,
+     dell_store_price: 0,
+     razer_store_price: 0
   },
   mutations: {
   },
@@ -13,3 +16,7 @@ export default new Vuex.Store({
   modules: {
   }
 })
+
+
+
+

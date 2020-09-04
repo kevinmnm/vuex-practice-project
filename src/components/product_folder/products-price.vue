@@ -1,32 +1,38 @@
 <template>
    <div class='products-price'>
       <div class='acer-price-title'>Acer Predator</div>
-      <form>
-         <input type='number' placeholder='$' />
+         <input type='number' placeholder='$' v-model='acer_set_price' />
          <button>Set</button>
-      </form>
 
       <br><br>
 
       <div class='dell-price-title'>Dell Alienware</div>
-      <form>
-         <input type='number' placeholder='$' />
+         <input type='number' placeholder='$' v-model='dell_set_price' />
          <button>Set</button>
-      </form>
 
       <br><br>
 
       <div class='razer-price-title'>Razer</div>
-      <form>
-         <input type='number' placeholder='$' />
+         <input type='number' placeholder='$' v-model='razer_set_price' />
          <button>Set</button>
-      </form>
    </div>
 </template>
 
 <script>
+
 export default {
-   name: "acer"
+   name: "acer",
+   computed: {
+      acer_set_price(){
+         return this.$store.state.acer_store_price
+      },
+      dell_set_price(){
+         return this.$store.state.dell_store_price
+      },
+      razer_set_price(){
+         return this.$store.state.razer_set_price
+      }
+   }
 };
 </script>
 

@@ -2,19 +2,19 @@
    <div>
       <div class='about-acer'>Acer Predator</div>
       <div class='sales-flex-wrap about-acer'>
-         <div>Original Price: </div>
+         <div>Original Price: {{ acer_original_price }}</div>
          <div>Sales Price: </div>
       </div>
       <br>
       <div class='about-dell'>Dell Alienware</div>
       <div class='sales-flex-wrap about-dell'>
-         <div>Original Price: </div>
+         <div>Original Price: {{ dell_original_price }}</div>
          <div>Sales Price: </div>
       </div>
       <br>
       <div class='about-razer'>Razer</div>
       <div class='sales-flex-wrap about-razer'>
-         <div>Original Price: </div>
+         <div>Original Price: {{ razer_original_price }}</div>
          <div>Sales Price: </div>
       </div>
    </div>
@@ -23,6 +23,17 @@
 <script>
 export default {
    name: "about-sales",
+   computed: {
+      acer_original_price(){
+         return this.$store.state.acer_store_price
+      },
+      dell_original_price(){
+         return this.$store.state.dell_store_price
+      },
+      razer_original_price(){
+         return this.$store.state.razer_store_price
+      }
+   }
 };
 </script>
 
@@ -55,8 +66,8 @@ export default {
 .sales-flex-wrap{
    position: relative;
    display: flex;
-   flex-direction: row;
-   border: 1px solid red;
+   flex-direction: column;
+   border: 2px solid white;
    justify-content: space-around;
 }
 

@@ -2,8 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link :to="{name: 'About', prams: {id: 'about'}}">About</router-link> |
-      <router-link :to="{name: 'Products', prams: {id: 'products'}}">Products</router-link>
+      <router-link :to="{name: 'About', params: {id: 'about'}}">About</router-link> |
+      <router-link :to="{name: 'Products', params: {id: 'products'}}">Products</router-link>
     </div>
     <router-view/>
   </div>
