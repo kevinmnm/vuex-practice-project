@@ -13,6 +13,7 @@ export default new Vuex.Store({
       original_price(state, payload){
          if (payload.brand === 'acer'){
             state.acer_store_price = payload.price;
+            console.log(this);
          } else if (payload.brand === 'dell'){
             state.dell_store_price = payload.price
          } else {

@@ -39,9 +39,20 @@ export default {
 
 <style scoped>
 
+.status-wrapper{
+   font-size: 25px;
+   font-weight: bold;
+   background: black;
+   color: white;
+}
+
 .home-price{
-   font-size: 30px;
-   color: brown;
+   padding: 10px;
+   background: black;
+   color: white;
+   font-size: 25px;
+   font-weight: bold;
+   font-family: 'Courier New', Courier, monospace;
 }
 
 .status-title{
